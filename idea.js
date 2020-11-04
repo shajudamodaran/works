@@ -172,8 +172,12 @@ function loadworks(id_para)
         						 var dateSecond = new Date(eedatefinal);
 								  var timeDiff = dateSecond.getTime() - dateFirst.getTime();
 								 var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));	
-									
-									if(diffDays>0)
+									if(C11=="Completed.")
+									{
+									tabCell.innerHTML = "0";
+									tabCell = tr.insertCell(-1);
+									}
+									else if(diffDays>0)
 									{
 										tabCell.innerHTML = diffDays+"-"+"Day remaining";
 									tabCell = tr.insertCell(-1);

@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js">
+<title>Untitled Document</title>
+<script type="text/javascript" src="daily_public.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>                                    
+<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script>
+<script type="text/javascript" src="daily_public.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+ const firebaseConfig = {
+  apiKey: "AIzaSyBz4BiFFwCbvQL-x5cNhQYabI7FTc682_w",
+  authDomain: "newidea-cb1c2.firebaseapp.com",
+  databaseURL: "https://newidea-cb1c2.firebaseio.com",
+  projectId: "newidea-cb1c2",
+  storageBucket: "newidea-cb1c2.appspot.com",
+  messagingSenderId: "3889985035",
+  appId: "1:3889985035:web:fbdfa7ababf38b0c58f90e",
+  measurementId: "G-YNNWZBEY6W"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+ 
+</script>
+
+<style type="text/css">
+.WBS {
+	font-family: Arial;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+.grgr {	color: #0000FF;
+}
+.hea {	font-weight: normal;
+}
+.reds {	color: #F00;
+}
+.sdsdds {	color: #139D2C;
+}
+.slider {  border-radius: 34px;
+}
+.slider {  position: relative;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {  border-radius: 50%;
+}
+.slider:before {  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+#customers {font-family: Arial;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+}
+#customers {	font-family: Arial;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+}+#customers {
+	font-family: Arial;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#customers td{
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size:11px;
+  word-wrap: break-word;
+}
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #5A85FB;
+  color: white;
+  text-align:center;
+}
+
+//................................................
+
+#customers2 {font-family: Arial;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+}
+#customers2 {	font-family: Arial;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+}+#customers2 {
+	font-family: Arial;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	
+}
+
+#customers2 td, #customers2 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#customers2 td{
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size:11px;
+  word-wrap: break-word;
+}
+#customers2 tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers2 tr:hover {background-color: #ddd;}
+
+#customers2 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #F36673;
+  color: white;
+  text-align:center;
+}
+
+//................................................
+
+#customers3 {font-family: Arial;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+}
+#customers3 {	font-family: Arial;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+}+#customers3 {
+	font-family: Arial;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	
+}
+
+#customers3 td, #customers3 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#customers3 td{
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size:11px;
+  word-wrap: break-word;
+}
+#customers3 tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers3 tr:hover {background-color: #ddd;}
+
+#customers3 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #FDB74B;
+  color: white;
+  text-align:center;
+}
+.rcorner
+{
+	border-radius: 10px;
+  border: 2px solid #00F;
+  padding: 20px;
+  width: auto;
+  height: auto;
+}
+.rcorner2
+{
+	border-radius: 10px;
+  border: 2px solid #FF9B37;
+  padding: 20px;
+  width: auto;
+  height: auto;
+}
+.rcorner3
+{
+	border-radius: 10px;
+  border: 2px solid  #FF0;
+  padding: 20px;
+  width: auto;
+  height: auto;
+}
+</style>
+<link href="popup.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table width="100%" height="132" border="0" cellspacing="0" style="height: inherit; text-align: right; font-family: 'RobotoCondensed Regular'; font-size: 14px;">
+  <tr>
+    <td height="31" colspan="7" align="left" bgcolor="#ED2724" style="text-align: center; font-family: Arial;">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="242" height="95" align="left" style="text-align: center; font-family: Arial;"><img src="IIB-logo small.png" alt="" width="242" height="65" onclick="openNav()" /></td>
+    <td width="220" align="left" style="text-align: center">&nbsp;</td>
+    <td width="66" bgcolor="#FFFFFF" style="text-align: center">&nbsp;</td>
+    <td width="90" style="text-align: center">&nbsp;</td>
+    <td width="54" bgcolor="#FFFFFF"><div align="center"></div></td>
+    <td width="292" bgcolor="#FFFFFF"><div align="center"></div></td>
+    <td width="208" bgcolor="#FFFFFF"><img src="skill.png" alt="" width="208" height="93" /></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0">
+  <tr>
+    <td height="23" bgcolor="#DDDDDD">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="2" align="center" valign="bottom"></td>
+  </tr>
+  <tr>
+    <td height="45" align="center" valign="bottom"><label style="font-family: Arial; font-size: 24px; color: #00F;"><strong>CCEK-NSDC Campus Program 2020-21</strong></label></td>
+  </tr>
+  <tr>
+    <td width="50%" height="28" align="center" class="WBS" id="td_with_date">TODAYS WORK BENCH</td>
+  </tr>
+  <tr>
+    <td height="21" align="right" valign="middle" bgcolor="#FFFFFF" class="WBS">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="23" align="right" valign="middle" bgcolor="#F7F7F7" class="WBS">HIGH PRIORITY WORKS</td>
+  </tr>
+  <tr>
+    <td height="111" valign="top">
+    
+    
+    <div class="rcorner">
+      <table width="100%" id="customers" style="width:100%;table-layout: auto;">
+        <tr style="text-align: justify; font-family: Arial;">
+          <th width="5%" height="41" bgcolor="#4A8AF4">SL.NO</th>
+          <th width="8%">PRIORITY LEVEL</th>
+          <th width="18%">WORK</th>
+          <th width="8%">ASSIGNED TO</th>
+          <th width="8%">ASSIGNED ON</th>
+          <th width="7%"><p>T.A.T</p></th>
+          <th width="9%">TODAYS STATUS</th>
+          <th width="11%">PRESS THE BUTTON BELLOW FOR UPDATING TODAYS WORK STATUS</th>
+        </tr>
+      </table>
+    </div>
+    
+    
+    </td>
+  </tr>
+  <tr>
+    <td height="28" align="center" valign="middle" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="28" align="center" valign="middle" bgcolor="#F7F7F7"><span class="WBS">MEDIUM PRIORITY WORKS</span></td>
+  </tr>
+  <tr>
+    <td height="141" valign="top"><div class="rcorner2">
+      <table width="100%" id="customers2" style="width:100%;table-layout: auto;">
+        <tr style="text-align: justify; font-family: Arial;">
+          <th width="5%" height="41" bgcolor="#4A8AF4">SL.NO</th>
+          <th width="8%">PRIORITY LEVEL</th>
+          <th width="18%">WORK</th>
+          <th width="8%">ASSIGNED TO</th>
+          <th width="8%">ASSIGNED ON</th>
+          <th width="7%"><p>T.A.T</p></th>
+          <th width="9%">TODAYS STATUS</th>
+          <th width="11%">PRESS THE BUTTON BELLOW FOR UPDATING TODAYS WORK STATUS</th>
+        </tr>
+      </table>
+    </div></td>
+  </tr>
+  <tr>
+    <td height="29" align="center" valign="middle" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="29" align="center" valign="middle" bgcolor="#F7F7F7"><span class="WBS">LOW PRIORITY WORKS</span></td>
+  </tr>
+  <tr>
+    <td height="131" valign="top" bgcolor="#FFFFFF"><div class="rcorner3">
+      <table width="100%" id="customers3" style="width:100%;table-layout: auto;">
+        <tr style="text-align: justify; font-family: Arial;">
+          <th width="5%" height="41" bgcolor="#4A8AF4">SL.NO</th>
+          <th width="8%">PRIORITY LEVEL</th>
+          <th width="18%">WORK</th>
+          <th width="8%">ASSIGNED TO</th>
+          <th width="8%">ASSIGNED ON</th>
+          <th width="7%"><p>T.A.T</p></th>
+          <th width="9%">TODAYS STATUS</th>
+          <th width="11%">PRESS THE BUTTON BELLOW FOR UPDATING TODAYS WORK STATUS</th>
+        </tr>
+      </table>
+    </div></td>
+  </tr>
+  <tr>
+    <td height="29" bgcolor="#FFFFFF"><input type="submit" name="button3" id="button2" value="Share" class="whatsapp"/></td>
+  </tr>
+  <tr>
+    <td height="29" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="29" bgcolor="#D6D6D6">&nbsp;</td>
+  </tr>
+</table>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close" id="close" onclick="closeit();">&times;</span>
+      <h2>Update Today Status</h2>
+    </div>
+    <div class="modal-body">
+      <label id="workid" style="visibility:hidden;" ></label>
+        <table  border="0" align="center" cellspacing="1" id="edittable" style="background: #FCFCFC; margin: 15px; border-radius: 2px; border: 2px solid #CCC; font-family: Arial; font-size: 14px; width: 97%;">
+        <tr>
+          <td width="1%" height="21">&nbsp;</td>
+          <td width="16%" align="right" class="fbdsfsdb">&nbsp;</td>
+          <td width="1%">&nbsp;</td>
+          <td colspan="2">&nbsp;</td>
+          <td><label id="user_name"></label>&nbsp;</td>
+          <td><label id="task_id" style="visibility:hidden;"></label></td>
+        </tr>
+        <tr>
+          <td height="36">&nbsp;</td>
+          <td align="right" valign="middle" class="fbdsfsdb">Enter Your Key :</td>
+          <td>&nbsp;</td>
+          <td colspan="2" align="left" valign="middle"><label for="textfield"></label>
+          <input type="password" name="textfield" id="pword" />
+          
+           <img src="load.gif" alt="" width="23" height="23" id="level_load" style=" display:none;" />
+          
+          <input type="submit" name="button" id="button" value="Validate" onclick="validate();" /></td>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="24">&nbsp;</td>
+          <td align="right" class="fbdsfsdb">Enter Today status :</td>
+          <td>&nbsp;</td>
+          <td colspan="2" rowspan="3"><label for="textarea"></label>
+          <textarea name="textarea" id="status_field" cols="45" rows="5" style="visibility: hidden;"></textarea></td>
+          <td width="25%">&nbsp;</td>
+          <td width="40%">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="30">&nbsp;</td>
+          <td align="right" class="fbdsfsdb">&nbsp;</td>
+          <td>&nbsp;</td>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td align="right">&nbsp;</td>
+          <td>&nbsp;</td>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="30">&nbsp;</td>
+          <td align="right">&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td align="right" valign="middle"><input type="submit" name="button2" id="submitt_btn" value="Update Status" style="visibility:hidden;" onclick="updatenow();" /></td>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td align="right">&nbsp;</td>
+          <td>&nbsp;</td>
+          <td width="4%">&nbsp;</td>
+          <td width="13%" align="right" valign="middle">&nbsp;</td>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+</table>
+      
+      <p>&nbsp;</p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
